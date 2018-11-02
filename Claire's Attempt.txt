@@ -1,9 +1,7 @@
 This is Claire's attempt to commit and add a file to the repository.
 It's so cool to work with GitHub!
 Git it done!
-<<<<<<< HEAD
 hungry hungry children!
 
 
 Googling github questions is a good idea
->>>>>>> 7e7cf63c573a22a36a76d4a20361c94b3dc38d59
