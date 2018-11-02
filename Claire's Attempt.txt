@@ -1,4 +1,6 @@
 This is Claire's attempt to commit and add a file to the repository.
 It's so cool to work with GitHub!
 Git it done!
+hungry hungry hippos!
+
 
