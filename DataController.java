@@ -1,12 +1,12 @@
-package com.alex.j.dndapp;
+package com.pennyana.bilbo1;
 
 public class DataController {
     GameNight gameNight;
-    User currentUser;
+    Users currentUser;
 
-    public void DataController(User) {
-        return;
-    }
+    //public void DataController(Users) {
+
+    //}
 
     public void loadUser() {
         return;
@@ -23,4 +23,6 @@ public class DataController {
     public void storeGameNight() {
         return;
     }
-}
+    private void setContentView(int activity_main) {
+    }
+};

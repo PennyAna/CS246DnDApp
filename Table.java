@@ -1,4 +1,4 @@
-package com.alex.j.dndapp;
+package com.pennyana.bilbo1;
 
 import java.util.List;
 
@@ -28,11 +28,11 @@ public class Table {
         this.gameDescription = gameDescription;
     }
 
-    public void addPlayer(User newPlayer) {
+    public void addPlayer(Users newPlayer) {
         return;
     }
 
-    public void removePlayer(User player) {
+    public void removePlayer(Users player) {
         return;
     }
 }
