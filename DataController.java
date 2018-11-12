@@ -2,7 +2,7 @@ package com.pennyana.bilbo1;
 
 public class DataController {
     GameNight gameNight;
-    Users currentUser;
+    User currentUser;
 
     //public void DataController(Users) {
 

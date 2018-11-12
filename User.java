@@ -1,10 +1,10 @@
 package com.pennyana.bilbo1;
 
-import java.util.List;
+import java.util.ArrayList;
 
-public class Users extends Character {
+public class User {
 
-    List<Character> characters;
+    ArrayList<Character> characters;
     String username;
     String passHash;
     String fullName;
@@ -17,7 +17,7 @@ public class Users extends Character {
      * @param value the value to be represented by the
      *              {@code Character} object.
      */
-    public Users(char value) {
+    public User(char value) {
     }
 
     String getUsername() {
@@ -47,7 +47,7 @@ public class Users extends Character {
     void setIsSignedUp(boolean signedUp) {
 
     }
-    List<Character> getCharacters() {
+    ArrayList<Character> getCharacters() {
         return null;
     }
     void setCharacter(Character newCharacter) {

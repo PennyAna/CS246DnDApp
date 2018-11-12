@@ -1,10 +1,11 @@
 package com.pennyana.bilbo1;
 
-import java.util.List;
+
+import java.util.ArrayList;
 
 public class Table {
     int currentNumPlayers;
-    List<Users> players;
+    ArrayList<User> players;
     String gameDescription;
     int numPlayersPossible;
 
@@ -16,7 +17,7 @@ public class Table {
         return;
     }
 
-    public List<Users> getPlayers() {
+    public ArrayList<User> getPlayers() {
         return players;
     }
 
@@ -28,11 +29,11 @@ public class Table {
         this.gameDescription = gameDescription;
     }
 
-    public void addPlayer(Users newPlayer) {
+    public void addPlayer(User newPlayer) {
         return;
     }
 
-    public void removePlayer(Users player) {
+    public void removePlayer(User player) {
         return;
     }
 }
