@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="4dp"
+        android:clickable="true"
+        android:background="#99123456">
+
+        <Button
+            android:id="@+id/character_one"
+            android:layout_width="250"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Name Here"
+            app:layout_constraintBottom_toTopOf="@+id/character_two"
+            app:layout_constraintEnd_toStartOf="@+id/delete_char_one2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/character_header" />
+
+        <Button
+            android:id="@+id/character_four"
+            android:layout_width="250"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="60dp"
+            android:text="Name Here"
+            app:layout_constraintBottom_toTopOf="@+id/create_new_char"
+            app:layout_constraintEnd_toStartOf="@+id/delete_char_one"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/character_three" />
+
+        <Button
+            android:id="@+id/character_three"
+            android:layout_width="250"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Name Here"
+            app:layout_constraintBottom_toTopOf="@+id/character_four"
+            app:layout_constraintEnd_toStartOf="@+id/delete_char_one3"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/character_two" />
+
+        <Button
+            android:id="@+id/character_two"
+            android:layout_width="250"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Name Here"
+            app:layout_constraintBottom_toTopOf="@+id/character_three"
+            app:layout_constraintEnd_toStartOf="@+id/delete_char_one4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/character_one" />
+
+        <TextView
+            android:id="@+id/character_header"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="8dp"
+            android:text="Characters"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large.Inverse"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/character_one"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/delete_char_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Delete"
+            app:layout_constraintBottom_toTopOf="@+id/create_new_char"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/character_four"
+            app:layout_constraintTop_toBottomOf="@+id/delete_char_one3" />
+
+        <Button
+            android:id="@+id/delete_char_one2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="138dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Delete"
+            app:layout_constraintBottom_toTopOf="@+id/delete_char_one4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/character_one"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/delete_char_one3"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Delete"
+            app:layout_constraintBottom_toTopOf="@+id/delete_char_one"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/character_three"
+            app:layout_constraintTop_toBottomOf="@+id/delete_char_one4" />
+
+        <Button
+            android:id="@+id/delete_char_one4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="5dp"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Delete"
+            app:layout_constraintBottom_toTopOf="@+id/delete_char_one3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/character_two"
+            app:layout_constraintTop_toBottomOf="@+id/delete_char_one2" />
+
+        <Button
+            android:id="@+id/create_new_char"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="94dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="96dp"
+            android:layout_marginBottom="26dp"
+            android:text="Create New Character"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/delete_char_one" />
+
+</android.support.constraint.ConstraintLayout>
