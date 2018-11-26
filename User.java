@@ -1,4 +1,5 @@
-package com.pennyana.bilbo1;
+package org.haderlie.claire.danddapp;
+
 
 import java.util.ArrayList;
 
@@ -17,50 +18,56 @@ public class User {
      * @param value the value to be represented by the
      *              {@code Character} object.
      */
+
     public User(char value) {
     }
 
     String getUsername() {
-
-        return null;
+        return username;
     }
-    void setUsername(String newUserName) {
 
-
+    void setUsername(String newUsername) {
+        username = newUsername;
     }
+
     String getFullName() {
-
-        return null;
+        return fullName;
     }
+
     void setFullName(String newName) {
-
+        fullName = newName;
     }
+
     String getPassHash() {
-        return null;
+        return passHash;
     }
+
     void setPassHash(String hash) {
-
+        passHash = hash;
     }
+
     boolean getIsSignedUp() {
-        return false;
+        return isSignedUp;
     }
-    void setIsSignedUp(boolean signedUp) {
 
+    void setIsSignedUp(boolean signedUp) {
+        isSignedUp = signedUp;
     }
+
     ArrayList<Character> getCharacters() {
         return null;
     }
-    void setCharacter(Character newCharacter) {
 
-    }
     void removeCharacter(int index) {
-
+        characters.remove(index);
     }
+
     void addCharacter(Character newChar) {
-
+        characters.add(newChar);
     }
-    void editCharacter(int index, Character character) {
 
-    }
+    void editCharacter(int index, Character editedCharacter) {
+        characters.add(index, editedCharacter);
+        }
 }
 
