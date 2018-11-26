@@ -1,4 +1,4 @@
-package com.pennyana.bilbo1;
+package com.alex.j.cs246dd;
 
 public class Character {
     String cName;
@@ -7,27 +7,28 @@ public class Character {
     int level;
 
     String getcName() {
-        return null;
+        return cName;
     }
     void setcName(String newName) {
-
+        cName = newName;
     }
     String getcClass() {
-        return null;
+        return cClass;
     }
     void setcClass(String newClass) {
+        cClass = newClass;
 
     }
     String getcRace() {
-        return null;
+        return cRace;
     }
     void getcRace(String newRace) {
-
+        cRace = newRace;
     }
     int getLevel() {
-        return 0;
+        return level;
     }
     void setLevel(int newLevel) {
-
+        level = newLevel;
     }
 }
