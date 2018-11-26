@@ -1,4 +1,4 @@
-package com.pennyana.bilbo1;
+package org.haderlie.claire.danddapp;
 
 public class Character {
     String cName;
