@@ -1,5 +1,7 @@
-package com.pennyana.bilbo1;
+package com.alex.j.cs246dd;
 
+
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -13,8 +15,8 @@ public class Table {
         return numPlayersPossible;
     }
 
-    public void setNumPlayersPossible() {
-        return;
+    public void setNumPlayersPossible(int newNum) {
+        numPlayersPossible = newNum;
     }
 
     public ArrayList<User> getPlayers() {
@@ -30,10 +32,24 @@ public class Table {
     }
 
     public void addPlayer(User newPlayer) {
+        if (players.size() > 4)
+            Log.v("Table", "too many players");
+        else
+        {
+            players.add(newPlayer);
+        }
         return;
     }
 
     public void removePlayer(User player) {
+        if (players.contains(player))
+        {
+            players.remove(player);
+        }
+        else
+        {
+            Log.v("table", "player not in list");
+        }
         return;
     }
 }
