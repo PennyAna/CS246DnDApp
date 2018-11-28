@@ -1,6 +1,5 @@
 package com.alex.j.cs246dd;
 
-
 public class Character {
     String cName;
     String cClass;
