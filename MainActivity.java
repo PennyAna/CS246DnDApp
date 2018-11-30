@@ -2,6 +2,7 @@ package com.alex.j.cs246dd;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,12 +15,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.login);
     }
 
-    public void handleSignUp(){
+    public void handleSignUp(View random){
         setContentView(R.layout.signup);
         return;
     }
 
-    public void handleLogin() {
+    public void handleLogin(View random) {
         setContentView(R.layout.character_edit_xml);
         return;
     }
