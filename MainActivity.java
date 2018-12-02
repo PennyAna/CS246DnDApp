@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     //when the tables button is clicked in the main menu
     public void menuTables(View random) {
-        setContentView(R.layout.main_menu);
+        setContentView(R.layout.table_draft);
     }
 
     //when the character button is clicked in the main menu
