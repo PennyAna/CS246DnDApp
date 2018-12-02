@@ -1,5 +1,11 @@
 package com.alex.j.cs246dd;
 
+/**
+ * A class which stores the basic information about a D&D character
+ * including the character's name, level, class, and race.
+ *
+ * @author Alex, Claire, Nicole
+ */
 public class Character {
     String cName;
     String cClass;
@@ -17,7 +23,6 @@ public class Character {
     }
     void setcClass(String newClass) {
         cClass = newClass;
-
     }
     String getcRace() {
         return cRace;

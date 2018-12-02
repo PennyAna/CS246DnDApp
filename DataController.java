@@ -1,4 +1,4 @@
-package org.haderlie.claire.dundrag;
+package com.alex.j.cs246dd;
 
 import android.util.Log;
 import android.widget.EditText;

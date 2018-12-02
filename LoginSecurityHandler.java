@@ -1,5 +1,4 @@
-package PUT THAT HERE;
-
+package com.alex.j.cs246dd;
 import java.util.HashMap;
 
 public class LoginSecurityHandler {

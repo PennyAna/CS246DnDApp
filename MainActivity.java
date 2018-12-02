@@ -41,4 +41,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_menu);
     }
 
+    //when a character needs to be created/edited
+    public void editCharacter (View random) {
+        setContentView(R.layout.character_edit_xml);
+    }
+
+    // to return to main menu
+    public void returnToMenu(View random) {
+        setContentView(R.layout.main_menu);
+    }
+
+    //view a specific table
+    public void viewTable (View random) {
+        setContentView(R.layout.adventure_draft);
+    }
+
 }
