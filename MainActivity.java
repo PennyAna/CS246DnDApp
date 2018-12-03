@@ -56,4 +56,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.adventure_draft);
     }
 
+    // delete a character from the user's list of characters
+    public void characterDelete (View random) {
+        setContentView(R.layout.character_signup_xml);
+    }
+
+    //register a new user
+    public void signup (View random) {
+        setContentView(R.layout.main_menu);
+    }
+
+    //save a character
+    public void characterSave (View random) {
+        setContentView(R.layout.character_signup_xml);
+    }
+
 }

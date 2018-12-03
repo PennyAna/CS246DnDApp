@@ -157,15 +157,14 @@
     <EditText
         android:id="@+id/character_notes"
         android:layout_width="351dp"
-        android:layout_height="125dp"
+        android:layout_height="77dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textMultiLine"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -185,5 +184,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="3dp"
+        android:onClick="characterSave"
+        android:text="save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
