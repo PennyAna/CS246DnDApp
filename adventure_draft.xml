@@ -27,11 +27,15 @@
         android:layout_marginTop="104dp"
         android:layout_marginEnd="123dp"
         android:layout_marginBottom="166dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="5dp"
         android:text="@string/information_goes_here"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
 
     <Button
         android:id="@+id/button6"

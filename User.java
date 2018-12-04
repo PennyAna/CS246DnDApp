@@ -12,29 +12,29 @@ import java.util.ArrayList;
  * @author Niclairex
  * @version 3.14159
  */
-public class User {
+class User {
 
     //List of the characters that the user has
     ArrayList<Character> characters;
 
     //The username
-    String username;
+    private String username;
 
     //User's password
-    String password;
+    private String password;
 
     //A hashed version of the users' password
-    String passHash;
+    private String passHash;
 
-    String salt;
+    private String salt;
 
     //The user's full name
-    String firstName;
+    private String firstName;
 
-    String lastName;
+    private String lastName;
 
     //A boolean determining if the user is signed up for a table_draft or not
-    Boolean isSignedUp;
+    private Boolean isSignedUp;
     User() {
         username = "";
         password = "";

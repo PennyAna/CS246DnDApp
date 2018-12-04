@@ -7,9 +7,9 @@ import java.util.ArrayList;
 
 public class Table {
     int currentNumPlayers;
-    ArrayList<User> players;
-    String gameDescription;
-    int numPlayersPossible;
+    private ArrayList<User> players;
+    private String gameDescription;
+    private int numPlayersPossible;
 
     public int getNumPlayersPossible() {
         return numPlayersPossible;
@@ -34,11 +34,9 @@ public class Table {
     public void addPlayer(User newPlayer) {
         if (players.size() > 4)
             Log.v("Table", "too many players");
-        else
-        {
+        else {
             players.add(newPlayer);
         }
-        return;
     }
 
     public void removePlayer(User player) {
@@ -50,6 +48,5 @@ public class Table {
         {
             Log.v("table", "player not in list");
         }
-        return;
     }
 }

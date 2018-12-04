@@ -1,8 +1,6 @@
 package com.pennyana.dnd;
 
 import android.util.Log;
-import android.widget.EditText;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -37,7 +35,6 @@ public class DataController {
             resultBuilder.append(inputLine);
         }
         in.close();
-        return;
     }
     catch(Exception exp){
         exp.printStackTrace();
@@ -64,7 +61,6 @@ public class DataController {
                 resultBuilder.append(inputLine);
             }
             in.close();
-            return;
         }
         catch(Exception e){
             e.printStackTrace();
@@ -78,13 +74,12 @@ public class DataController {
 
         //here we will write the user to the database
 
-        return;
     }
 
     public void storeGameNight() {
-        return;
+
     }
 
     private void setContentView(int activity_main) {
     }
-};
+}

@@ -6,10 +6,10 @@ package com.pennyana.dnd;
  *
  * @author Alex, Claire, Nicole
  */
-public class Character {
-    String cName;
-    String cClass;
-    String cRace;
+class Character {
+    private String cName;
+    private String cClass;
+    private String cRace;
     int level;
 
     String getcName() {

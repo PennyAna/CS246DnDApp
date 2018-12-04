@@ -1,13 +1,11 @@
 package com.pennyana.dnd;
 
-import android.os.ParcelUuid;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    private LoginSecurityHandler loginControl;
     private DataController dataController;
 
     @Override
@@ -18,12 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void handleSignUp(View random){
         setContentView(R.layout.signup);
-        return;
     }
 
     public void handleLogin(View random) {
         setContentView(R.layout.main_menu);
-        return;
     }
 
     //when the tables button is clicked in the main menu
