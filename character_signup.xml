@@ -9,7 +9,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:elevation="4dp"
         android:clickable="true"
-        android:background="#99123456">
+        android:background="@drawable/wood">
 
         <Button
             android:id="@+id/character_one"

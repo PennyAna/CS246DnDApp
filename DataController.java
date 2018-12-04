@@ -1,4 +1,4 @@
-package com.alex.j.cs246dd;
+package com.pennyana.dnd;
 
 import android.util.Log;
 import android.widget.EditText;

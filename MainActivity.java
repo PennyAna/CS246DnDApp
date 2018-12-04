@@ -1,4 +1,4 @@
-package com.alex.j.cs246dd;
+package com.pennyana.dnd;
 
 import android.os.ParcelUuid;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_main);
     }
 
     public void handleSignUp(View random){
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     //when the character button is clicked in the main menu
     public void menuCharacter(View random) {
-        setContentView(R.layout.character_signup_xml);
+        setContentView(R.layout.character_signup);
     }
 
     //when the rules button is clicked in the main menu page
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     //when a character needs to be created/edited
     public void editCharacter (View random) {
-        setContentView(R.layout.character_edit_xml);
+        setContentView(R.layout.character_edit);
     }
 
     // to return to main menu
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     // delete a character from the user's list of characters
     public void characterDelete (View random) {
-        setContentView(R.layout.character_signup_xml);
+        setContentView(R.layout.character_signup);
     }
 
     //register a new user
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     //save a character
     public void characterSave (View random) {
-        setContentView(R.layout.character_signup_xml);
+        setContentView(R.layout.character_signup);
     }
 
 }

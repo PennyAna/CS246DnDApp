@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/wood">
 
     <Button
         android:id="@+id/button5"
@@ -13,7 +14,7 @@
         android:layout_marginStart="148dp"
         android:layout_marginEnd="148dp"
         android:layout_marginBottom="77dp"
-        android:text="sign up"
+        android:text="@string/sign_up"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -26,7 +27,7 @@
         android:layout_marginTop="104dp"
         android:layout_marginEnd="123dp"
         android:layout_marginBottom="166dp"
-        android:text="information goes here"
+        android:text="@string/information_goes_here"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +41,7 @@
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="107dp"
         android:onClick="returnToMenu"
-        android:text="Main Menu"
+        android:text="@string/main_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

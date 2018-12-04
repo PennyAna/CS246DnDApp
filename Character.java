@@ -1,4 +1,4 @@
-package com.alex.j.cs246dd;
+package com.pennyana.dnd;
 
 /**
  * A class which stores the basic information about a D&D character

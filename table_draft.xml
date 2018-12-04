@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/wood">
 
     <Button
         android:id="@+id/table_one"
@@ -15,7 +16,7 @@
         android:layout_marginEnd="138dp"
         android:layout_marginBottom="39dp"
         android:onClick="viewTable"
-        android:text="Table One"
+        android:text="@string/table_one"
         app:layout_constraintBottom_toTopOf="@+id/table_two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,10 +29,8 @@
         android:layout_marginStart="148dp"
         android:layout_marginTop="54dp"
         android:layout_marginEnd="135dp"
-        android:layout_marginBottom="46dp"
         android:onClick="viewTable"
-        android:text="Table Two"
-        app:layout_constraintBottom_toTopOf="@+id/table_three"
+        android:text="@string/table_two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/table_one" />
@@ -41,13 +40,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="149dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="122dp"
-        android:layout_marginBottom="44dp"
         android:onClick="viewTable"
-        android:text="Table Three"
-        app:layout_constraintBottom_toTopOf="@+id/table_four"
+        android:text="@string/table_three"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/table_two" />
 
@@ -58,11 +56,13 @@
         android:layout_marginStart="148dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="131dp"
-        android:layout_marginBottom="97dp"
+        android:layout_marginBottom="8dp"
         android:onClick="viewTable"
-        android:text="Table Four"
+        android:text="@string/table_four"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/table_three" />
+        app:layout_constraintTop_toBottomOf="@+id/table_three"
+        app:layout_constraintVertical_bias="0.22" />
 </android.support.constraint.ConstraintLayout>
