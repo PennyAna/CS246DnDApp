@@ -30,10 +30,10 @@
     <string name="error_field_required" />
     <string name="error_invalid_password" />
     <string name="permission_rationale" />
-    <string name="barber_text">People have been	disappearing at	night in the city of Silverymoon.
+    <string name="barber_text">People have been disappearing at	night in the city of Silverymoon.
         Some vanish entirely, leaving	behind whispered rumors	of	fiends or other	evil creatures
         having spirited them away. Others return strangely altered,	with their memories	of having
-        been kidnapped wiped clean and their minds strangely dulled—and	 always	with remarkable
+        been kidnapped wiped clean and their minds strangely dulled, and	 always	with remarkable
         haircuts.</string>
     <string name="elf_text">In the jungles of Chult lies Camp Highmore, a trading place in the heart
         of the wilderness. Here the fittest rule, but an elf has recently tipped the scale of power
@@ -43,15 +43,15 @@
         treat from his childhood, he will stop at nothing to get his hands on the best apple pie in
         the whole world. He hires a group of adventurers to seek out the bakery that once produced
         the wonderful dessert - unfortunately for them, the bakery has long since been overrun by
-        goblins. But all is not as it seems at Grammy's Bakery, and Tyndareus isn't hte only one
-        who'd do anything for those pies.</string>
+        goblins. But all is not as it seems at Grammy\&apos;s Bakery, and Tyndareus isn\&apos;t the only one
+        who\&apos;d do anything for those pies.</string>
     <string name="detective_text">Janos Meer, the powerful underworld figure known as the Beggar
-        King, has vanished. Gribbits—Meer’s right-hand goblin—has tasked a group of neophyte
+        King, has vanished. Gribbits, Meer\&apos;s right-hand goblin, has tasked a group of neophyte
         adventurers with getting to the bottom of where his boss has gone, and why. This is easier
         said than done, of course. The explosive destruction quite accidentally meted out by the
-        Dragon Friends some months prior has made their city a dangerous place. It’s up to the
+        Dragon Friends some months prior has made their city a dangerous place. It\&apos;s up to the
         adventurers to follow the clues through the urban chaos, unravel the mystery of the missing
-        Meer, and maybe—just maybe—expose a conspiracy greater than any of them expected.</string>
+        Meer, and maybe, just maybe, expose a conspiracy greater than any of them expected.</string>
     <string name="adventures_available">Adventures Available</string>
     <string name="button_advent1">Button</string>
     <string name="button_advent2">Button</string>
