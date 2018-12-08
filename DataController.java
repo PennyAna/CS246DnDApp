@@ -1,6 +1,8 @@
-package com.pennyana.dnd;
+package org.haderlie.claire.dundrag;
 
 import android.util.Log;
+import android.widget.EditText;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -11,7 +13,7 @@ public class DataController {
     User currentUser;
 
     /*public void DataController(Users) {
-    http://157.201.194.254/~clairehaderlie/hold/gameNight.txt
+
     */
 
     /**
@@ -22,7 +24,7 @@ public class DataController {
 
 
         try {
-        URL infoURL = new URL("http://157.201.194.254/~clairehaderlie/hold/userInfo.txt");
+        URL infoURL = new URL("https://niclairex.com/userData.txt");
 
         HttpURLConnection infoConnection = (HttpURLConnection) infoURL.openConnection();
 
@@ -35,6 +37,7 @@ public class DataController {
             resultBuilder.append(inputLine);
         }
         in.close();
+        return;
     }
     catch(Exception exp){
         exp.printStackTrace();
@@ -50,7 +53,7 @@ public class DataController {
     public void loadGameNight() {
         StringBuilder resultBuilder = new StringBuilder();
         try {
-            URL infoURL = new URL("http://157.201.194.254/~clairehaderlie/hold/gameNight.txt");
+            URL infoURL = new URL("https://niclairex.com/gameNightData.txt");
 
             HttpURLConnection infoConnection = (HttpURLConnection) infoURL.openConnection();
             BufferedReader in = new BufferedReader(new InputStreamReader(infoConnection.getInputStream()));
@@ -61,6 +64,7 @@ public class DataController {
                 resultBuilder.append(inputLine);
             }
             in.close();
+            return;
         }
         catch(Exception e){
             e.printStackTrace();
@@ -74,12 +78,13 @@ public class DataController {
 
         //here we will write the user to the database
 
+        return;
     }
 
     public void storeGameNight() {
-
+        return;
     }
 
     private void setContentView(int activity_main) {
     }
-}
+};
