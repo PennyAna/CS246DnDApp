@@ -67,4 +67,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.character_signup);
     }
 
+    //join an adventure
+    public void joinAdventure (View random) {
+        /*
+        String firstName = dataController.getCurrentUser().getFirstName();
+        String lastName = dataController.getCurrentUser().getLastName();
+        Character currentCharacter = dataController.getCurrentUser().getCharacters().get(0);
+        SignedUpUser newPlayer = new SignedUpUser(dataController.getCurrentUser(), currentCharacter);
+        dataController.getGameNight().getTable(0).addPlayer(newPlayer);
+        */
+        setContentView(R.layout.main_menu);
+    }
+
 }

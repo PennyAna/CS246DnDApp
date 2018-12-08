@@ -1,20 +1,25 @@
-
-package org.haderlie.claire.dundrag;
+package com.alex.j.cs246dd;
 
 import android.util.Log;
-import android.widget.EditText;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class DataController {
-    GameNight gameNight;
-    User currentUser;
+    private GameNight gameNight;
+    private User currentUser;
+
+    public GameNight getGameNight() {
+        return gameNight;
+    }
+
+    public User getCurrentUser() {
+        return currentUser;
+    }
 
     /*public void DataController(Users) {
-
+    http://157.201.194.254/~clairehaderlie/hold/gameNight.txt
     */
 
     /**
@@ -25,7 +30,7 @@ public class DataController {
 
 
         try {
-        URL infoURL = new URL("https://niclairex.com/userData.txt");
+        URL infoURL = new URL("http://157.201.194.254/~clairehaderlie/hold/userInfo.txt");
 
         HttpURLConnection infoConnection = (HttpURLConnection) infoURL.openConnection();
 
@@ -38,7 +43,6 @@ public class DataController {
             resultBuilder.append(inputLine);
         }
         in.close();
-        return;
     }
     catch(Exception exp){
         exp.printStackTrace();
@@ -54,7 +58,7 @@ public class DataController {
     public void loadGameNight() {
         StringBuilder resultBuilder = new StringBuilder();
         try {
-            URL infoURL = new URL("https://niclairex.com/gameNightData.txt");
+            URL infoURL = new URL("http://157.201.194.254/~clairehaderlie/hold/gameNight.txt");
 
             HttpURLConnection infoConnection = (HttpURLConnection) infoURL.openConnection();
             BufferedReader in = new BufferedReader(new InputStreamReader(infoConnection.getInputStream()));
@@ -65,7 +69,6 @@ public class DataController {
                 resultBuilder.append(inputLine);
             }
             in.close();
-            return;
         }
         catch(Exception e){
             e.printStackTrace();
@@ -79,13 +82,12 @@ public class DataController {
 
         //here we will write the user to the database
 
-        return;
     }
 
     public void storeGameNight() {
-        return;
+
     }
 
     private void setContentView(int activity_main) {
     }
-};
+}
