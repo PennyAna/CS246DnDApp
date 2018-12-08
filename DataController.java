@@ -1,3 +1,4 @@
+
 package org.haderlie.claire.dundrag;
 
 import android.util.Log;

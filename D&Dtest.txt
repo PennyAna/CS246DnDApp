@@ -1,0 +1,1 @@
+{"User":{"username":"AwesomeKnight", "password":"", "salt":"random", "passHash":"update me!" , "firstName":"John", "lastName":"Doe", "isSignedUp":false}

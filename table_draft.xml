@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollMe"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/wood"
-    tools:context="com.pennyana.dnd.MainActivity">
+    android:layout_height="match_parent">
+    <!--tools:context="com.pennyana.dnd.MainActivity"-->
+    <!--android:background="@drawable/wood"-->
 
     <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adventureLayout"

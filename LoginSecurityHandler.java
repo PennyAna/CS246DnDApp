@@ -1,4 +1,4 @@
-package org.haderlie.claire.dundrag;
+package com.alex.j.cs246dd;
 
 import android.view.View;
 import android.widget.EditText;
@@ -6,6 +6,7 @@ import android.widget.EditText;
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.HashMap;
 import java.util.Random;
 
 import javax.crypto.SecretKeyFactory;
@@ -13,7 +14,6 @@ import javax.crypto.spec.PBEKeySpec;
 
 public class LoginSecurityHandler {
    // User currentUser;
-
 
     MainActivity mainActivity;
 
@@ -45,7 +45,6 @@ public class LoginSecurityHandler {
         hashUserPassword(newUser);
     }
 
-    //TODO set this number to be a constant
     private static final Random RANDOM = new SecureRandom();
 
 
@@ -138,10 +137,7 @@ public class LoginSecurityHandler {
      * @return Whether or not the password values match.
      * @exception Exception If there is a problem with the chosen hash function.
      */
-    public Boolean verifyPassword(User user) throws Exception {
-
-        EditText usernameInput = (EditText)mainActivity.findViewById(R.id.signup_username);
-        EditText passwordInput = (EditText)mainActivity.findViewById(R.id.signup_password);
+    public static Boolean verifyPassword(User user) throws Exception {
 
         // Have to get the raw data values to use on our hash function
         char[] password = user.getPassword().toCharArray();

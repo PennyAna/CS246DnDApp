@@ -1,4 +1,4 @@
-package com.pennyana.dnd;
+package com.alex.j.cs246dd;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
