@@ -2,9 +2,12 @@ package com.alex.j.cs246dd;
 
 import android.util.Log;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Scanner;
 
 public class DataController {
     private GameNight gameNight;
@@ -60,21 +63,31 @@ public class DataController {
         try {
             URL infoURL = new URL("http://157.201.194.254/~clairehaderlie/hold/gameNight.txt");
 
-            HttpURLConnection infoConnection = (HttpURLConnection) infoURL.openConnection();
-            BufferedReader in = new BufferedReader(new InputStreamReader(infoConnection.getInputStream()));
+        // StringBuilder resultBuilder = new StringBuilder();
+        try {
 
+            URL info = new URL("http://www.niclairex.com/gameNightData.txt");
+            BufferedReader in = new BufferedReader(new InputStreamReader(info.openStream()));
             String inputLine;
+            if(in.readLine() == null)
+                Log.e("DATACONTROLLER", "nothing to read in.");
 
-            while ((inputLine = in.readLine()) != null) {
-                resultBuilder.append(inputLine);
-            }
+            while ((inputLine = in.readLine()) != null)
+                data.append(inputLine);
             in.close();
+        }
+        catch (MalformedURLException e) {
+            System.out.println("Malformed URL: " + e.getMessage());
+        }
+        catch (IOException e) {
+            System.out.println("I/O Error: " + e.getMessage());
         }
         catch(Exception e){
             e.printStackTrace();
             Log.e("DATACONTROLLER", "Exception thrown while retrieving Game Night information from database.");
         }
-        Log.v("DATACONTROLLER", "From gameNight.txt: " + resultBuilder.toString());
+
+        Log.v("DATACONTROLLER", "From gameNight.txt: " + data.toString());
     }
 
 
@@ -85,7 +98,8 @@ public class DataController {
     }
 
     public void storeGameNight() {
-
+        //Here we will write the gameNight information to the database
+        return;
     }
 
     private void setContentView(int activity_main) {
