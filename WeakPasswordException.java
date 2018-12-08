@@ -1,4 +1,4 @@
-package org.haderlie.claire.dundrag;
+package com.alex.j.cs246dd;
 
 //This class is an Exception class that throws messages when used in a try/catch statement.
 public class WeakPasswordException extends Exception {

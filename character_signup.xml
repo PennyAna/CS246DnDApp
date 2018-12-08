@@ -8,8 +8,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:elevation="4dp"
-        android:clickable="true"
-        android:background="@drawable/wood">
+        android:clickable="true">
+        <!--android:background="@drawable/wood"-->
 
         <Button
             android:id="@+id/character_one"

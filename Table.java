@@ -1,4 +1,4 @@
-package com.pennyana.dnd;
+package com.alex.j.cs246dd;
 
 
 import android.util.Log;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Table {
     int currentNumPlayers;
-    private ArrayList<User> players;
+    private ArrayList<SignedUpUser> players;
     private String gameDescription;
     private int numPlayersPossible;
 
@@ -19,7 +19,7 @@ public class Table {
         numPlayersPossible = newNum;
     }
 
-    public ArrayList<User> getPlayers() {
+    public ArrayList<SignedUpUser> getPlayers() {
         return players;
     }
 
@@ -31,7 +31,7 @@ public class Table {
         this.gameDescription = gameDescription;
     }
 
-    public void addPlayer(User newPlayer) {
+    public void addPlayer(SignedUpUser newPlayer) {
         if (players.size() > 4)
             Log.v("Table", "too many players");
         else {
