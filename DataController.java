@@ -1,4 +1,4 @@
-package org.haderlie.claire.dundrag;
+package com.alex.j.cs246dd;
 
 import android.util.Log;
 import android.widget.EditText;
@@ -17,7 +17,7 @@ public class DataController {
 
     /*public void DataController(Users) {
 
-    */
+     */
 
     /**
      * Read in the game night information from the database.
@@ -28,34 +28,39 @@ public class DataController {
 
         try {
 
-        URL infoURL = new URL("https://niclairex.com/userData.txt");
+            URL infoURL = new URL("https://niclairex.com/userData.txt");
 
-        HttpURLConnection infoConnection = (HttpURLConnection) infoURL.openConnection();
+            HttpURLConnection infoConnection = (HttpURLConnection) infoURL.openConnection();
 
-        BufferedReader in = new BufferedReader(new InputStreamReader(infoConnection.getInputStream()));
+            BufferedReader in = new BufferedReader(new InputStreamReader(infoConnection.getInputStream()));
 
-        String inputLine;
+            String inputLine;
 
 
-        while ((inputLine = in.readLine()) != null) {
-            resultBuilder.append(inputLine);
+            while ((inputLine = in.readLine()) != null) {
+                resultBuilder.append(inputLine);
+            }
+            in.close();
+            return;
+        } catch (Exception exp) {
+            exp.printStackTrace();
+            Log.e("DATACONTROLLER", "Exception thrown while retrieving User information from database.");
         }
-        in.close();
-        return;
-    }
-    catch(Exception exp){
-        exp.printStackTrace();
-        Log.e("DATACONTROLLER", "Exception thrown while retrieving User information from database.");
-    }
         Log.v("DATACONTROLLER", "From userInfo.txt: " + resultBuilder.toString());
+        currentUser.setFirstName("John");
+        currentUser.setLastName("Doe");
+        currentUser.setPassHash("H@$hB40Wn");
+        currentUser.setIsSignedUp(false);
+        currentUser.setPassword("G00dPassw0rd");
+        currentUser.setSalt("$3@$@17");
+        currentUser.setHashedPassword("h@$h$t4ing");
     }
 
     /**
      * Read in the game night information from the database.
-     *
      */
     public void loadGameNight() {
-       // String data = "";
+        // String data = "";
         StringBuilder data = new StringBuilder();
 
         StringBuilder resultBuilder = new StringBuilder();
@@ -72,14 +77,11 @@ public class DataController {
             }
             in.close();
 
-        }
-        catch (MalformedURLException e) {
+        } catch (MalformedURLException e) {
             System.out.println("Malformed URL: " + e.getMessage());
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.out.println("I/O Error: " + e.getMessage());
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             Log.e("DATACONTROLLER", "Exception thrown while retrieving Game Night information from database.");
         }
