@@ -1,4 +1,3 @@
-
 package org.haderlie.claire.dundrag;
 
 import android.util.Log;
@@ -28,6 +27,7 @@ public class DataController {
 
 
         try {
+
         URL infoURL = new URL("https://niclairex.com/userData.txt");
 
         HttpURLConnection infoConnection = (HttpURLConnection) infoURL.openConnection();
@@ -58,18 +58,20 @@ public class DataController {
        // String data = "";
         StringBuilder data = new StringBuilder();
 
-        // StringBuilder resultBuilder = new StringBuilder();
+        StringBuilder resultBuilder = new StringBuilder();
         try {
 
-            URL info = new URL("http://www.niclairex.com/gameNightData.txt");
-            BufferedReader in = new BufferedReader(new InputStreamReader(info.openStream()));
-            String inputLine;
-            if(in.readLine() == null)
-                Log.e("DATACONTROLLER", "nothing to read in.");
+            URL weatherURL = new URL("https://www.com/gameNightData.txt");
+            HttpURLConnection theConnection = (HttpURLConnection) weatherURL.openConnection();
+            BufferedReader in = new BufferedReader(new InputStreamReader(theConnection.getInputStream()));
 
-            while ((inputLine = in.readLine()) != null)
-                data.append(inputLine);
+            String inputLine;
+
+            while ((inputLine = in.readLine()) != null) {
+                resultBuilder.append(inputLine);
+            }
             in.close();
+
         }
         catch (MalformedURLException e) {
             System.out.println("Malformed URL: " + e.getMessage());
@@ -82,7 +84,7 @@ public class DataController {
             Log.e("DATACONTROLLER", "Exception thrown while retrieving Game Night information from database.");
         }
 
-        Log.v("DATACONTROLLER", "From gameNight.txt: " + data.toString());
+        Log.v("DATACONTROLLER", "From gameNight.txt: " + resultBuilder.toString());
     }
 
 
