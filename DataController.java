@@ -1,4 +1,4 @@
-package com.alex.j.cs246dd;
+package org.haderlie.claire.dundrag;
 
 import android.util.Log;
 import android.widget.EditText;
@@ -19,6 +19,9 @@ public class DataController {
 
      */
 
+    public void setCurrentUser(User user){
+        currentUser = user;
+    }
     /**
      * Read in the game night information from the database.
      */

@@ -1,4 +1,4 @@
-package com.alex.j.cs246dd;
+package org.haderlie.claire.dundrag;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,15 +7,19 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     private DataController dataController;
+    private LoginSecurityHandler loginSecurity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        dataController = new DataController();
+        loginSecurity = new LoginSecurityHandler(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
     public void handleSignUp(View random){
         setContentView(R.layout.signup);
+
     }
 
     public void handleLogin(View random) {
@@ -59,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
 
     //register a new user
     public void signup (View random) {
+        try {
+            dataController.setCurrentUser(loginSecurity.signUp());
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        
         setContentView(R.layout.main_menu);
     }
 
