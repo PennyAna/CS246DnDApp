@@ -17,12 +17,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void handleSignUp(View random){
-        setContentView(R.layout.signup);
+    public void goToSignUp(View random){
 
+        setContentView(R.layout.signup);
     }
 
     public void handleLogin(View random) {
+        dataController.setCurrentUser(loginSecurity.processLogin());
         setContentView(R.layout.main_menu);
     }
 
@@ -65,12 +66,11 @@ public class MainActivity extends AppCompatActivity {
     public void signup (View random) {
         try {
             dataController.setCurrentUser(loginSecurity.signUp());
-
         }
         catch(Exception e){
             e.printStackTrace();
         }
-        
+
         setContentView(R.layout.main_menu);
     }
 

@@ -26,8 +26,8 @@ public class DataController {
      * Read in the game night information from the database.
      */
     public void loadUser() {
-        StringBuilder resultBuilder = new StringBuilder();
 
+        StringBuilder resultBuilder = new StringBuilder();
 
         try {
 
@@ -50,6 +50,7 @@ public class DataController {
             Log.e("DATACONTROLLER", "Exception thrown while retrieving User information from database.");
         }
         Log.v("DATACONTROLLER", "From userInfo.txt: " + resultBuilder.toString());
+
         currentUser.setFirstName("John");
         currentUser.setLastName("Doe");
         currentUser.setPassHash("H@$hB40Wn");
