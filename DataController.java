@@ -3,6 +3,8 @@ package org.haderlie.claire.dundrag;
 import android.util.Log;
 import android.widget.EditText;
 
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,7 +27,7 @@ public class DataController {
     /**
      * Read in the game night information from the database.
      */
-    public void loadUser() {
+    public void loadUser(String username) {
 
         StringBuilder resultBuilder = new StringBuilder();
 
@@ -39,23 +41,30 @@ public class DataController {
 
             String inputLine;
 
-
             while ((inputLine = in.readLine()) != null) {
                 resultBuilder.append(inputLine);
             }
+
             in.close();
-            return;
+
+
+            Gson gson = new Gson();
+            String userJson = resultBuilder.toString();
+
+          User user = gson.fromJson(userJson, User.class);
+
         } catch (Exception exp) {
             exp.printStackTrace();
             Log.e("DATACONTROLLER", "Exception thrown while retrieving User information from database.");
         }
         Log.v("DATACONTROLLER", "From userInfo.txt: " + resultBuilder.toString());
 
+
+        //SINCE IT DOESN'T ACTUALLY WORK
         currentUser.setFirstName("John");
         currentUser.setLastName("Doe");
-        currentUser.setPassHash("H@$hB40Wn");
         currentUser.setIsSignedUp(false);
-        currentUser.setPassword("G00dPassw0rd");
+        currentUser.setPassword("");
         currentUser.setSalt("$3@$@17");
         currentUser.setHashedPassword("h@$h$t4ing");
     }

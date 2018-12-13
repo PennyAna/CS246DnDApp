@@ -20,38 +20,28 @@ public class LoginSecurityHandler {
         mainActivity = mainAct;
     }
 
-    public Boolean validateUsername() {
-        return true;
-    }
-
-    public Boolean validatePassword() {
-        return true;
-    }
-
     //Call this when they sign up
     public User signUp() throws Exception {
 
-
+        //Get all the values from the sign up sheets
         EditText firstNameInput = (EditText) mainActivity.findViewById(R.id.signup_firstname);
         EditText lastNameInput = (EditText) mainActivity.findViewById(R.id.signup_lastname);
 
         EditText usernameInput = (EditText) mainActivity.findViewById(R.id.signup_username);
         EditText passwordInput = (EditText) mainActivity.findViewById(R.id.signup_password);
 
-
-        String firstName = firstNameInput.getText().toString();
-        String lastName = lastNameInput.getText().toString();
-        String username = usernameInput.getText().toString();
-        String password = passwordInput.getText().toString();
-
-        User newUser = new User(firstName, lastName, username, password);
+        //Create a new user with all of those things in it
+        User newUser = new User(firstNameInput.getText().toString(), lastNameInput.getText().toString(),
+                usernameInput.getText().toString(), passwordInput.getText().toString());
 
         try{
-        hashUserPassword(newUser);}
+            //Attempt to hash the user's password
+            hashUserPassword(newUser);}
         catch(Exception e){
             e.printStackTrace();
         }
 
+        //Return the new user
         return newUser;
     }
 
@@ -110,7 +100,6 @@ public class LoginSecurityHandler {
             throw new WeakPasswordException("Password must be at least 4 characters long.");
         }
 
-
         // Once we've generated the hash, clear the old password
         // from memory for security purposes
         byte[] hash = getHash(password, salt);
@@ -136,25 +125,27 @@ public class LoginSecurityHandler {
     }
 
     /**
-     * This function uses the password and salt in the {@link User} to generate a hash,
-     * then compares that hash to the original hash value.
+     * This function takes in a User and a password and checks to see
+     * if the password is the same as what was loaded from the database
+     * and stored in the User that was passed in.
      *
-     * @param user The user whose password needs to be hashed.
-     * @return Whether or not the password values match.
-     * @throws Exception If there is a problem with the chosen hash function.
+     * @param user The User class that was loaded with the given username
+     * @param inputPassword The password that the user just input.
+     * @return  Whether or not the passwords match.
+     * @throws Exception If the hash function breaks.
      */
-    public static Boolean verifyPassword(User user) throws Exception {
+    public static Boolean verifyPassword(User user, String inputPassword) throws Exception {
 
-        // Have to get the raw data values to use on our hash function
-        char[] password = user.getPassword().toCharArray();
+        // Get the raw password and the salt
+        char[] password = inputPassword.toCharArray();
         byte[] salt = Base64.getDecoder().decode(user.getSalt());
 
-        // Generate the new hash, and retrieve the user's hash
+        // Generate the hash of the input password and get the hash of the user's password
         byte[] expectedHash = getHash(password, salt);
         byte[] userHash = Base64.getDecoder().decode(user.getHashedPassword());
 
         // If the new hash came out as null, or the lengths don't match,
-        // we know that the original password is different
+        // we know that the input password is different
         if (expectedHash == null || expectedHash.length != userHash.length)
             return false;
 
@@ -165,12 +156,8 @@ public class LoginSecurityHandler {
                 return false;
         }
 
-        // If we got this far, it means the password hashes match, so we
-        // can assume the passwords do as well.
+    // The passwords are the same!
         return true;
     }
 
-    public Boolean processLogin(){
-        return true;
-    }
 }
