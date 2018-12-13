@@ -1,4 +1,4 @@
-package org.haderlie.claire.dundrag;
+package com.alex.j.cs246dd;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +30,16 @@ public class MainActivity extends AppCompatActivity {
 
         String username = usernameInput.getText().toString();
         String password = passwordInput.getText().toString();
+
+        dataController.loadUser(username);
+        try {
+            if (loginSecurity.validatePassword(dataController.currentUser, password)) {
+                dataController.load
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
         User newUser = new User(username, password);
