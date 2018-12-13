@@ -170,30 +170,7 @@ public class LoginSecurityHandler {
         return true;
     }
 
-    public User processLogin(){
-
-        EditText usernameInput = (EditText) mainActivity.findViewById(R.id.signup_username);
-        EditText passwordInput = (EditText) mainActivity.findViewById(R.id.signup_password);
-
-        String username = usernameInput.getText().toString();
-        String password = passwordInput.getText().toString();
-
-
-        User newUser = new User(username, password);
-
-        try{
-            verifyPassword(newUser);
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-
-        try{
-            hashUserPassword(newUser);}
-        catch(Exception e){
-            e.printStackTrace();
-        }
-
-        return newUser;
+    public Boolean processLogin(){
+        return true;
     }
 }

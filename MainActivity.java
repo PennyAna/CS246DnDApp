@@ -3,6 +3,7 @@ package org.haderlie.claire.dundrag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +24,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleLogin(View random) {
-        dataController.setCurrentUser(loginSecurity.processLogin());
+
+        EditText usernameInput = (EditText) findViewById(R.id.signup_username);
+        EditText passwordInput = (EditText) findViewById(R.id.signup_password);
+
+        String username = usernameInput.getText().toString();
+        String password = passwordInput.getText().toString();
+
+
+        User newUser = new User(username, password);
+
+        //dataController.setCurrentUser();
         setContentView(R.layout.main_menu);
     }
 
