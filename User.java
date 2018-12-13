@@ -1,4 +1,4 @@
-package com.alex.j.cs246dd;
+package org.haderlie.claire.dundrag;
 
 
 import java.util.ArrayList;
@@ -12,34 +12,40 @@ import java.util.ArrayList;
  * @author Niclairex
  * @version 3.14159
  */
-class User {
+public class User {
 
     //List of the characters that the user has
     ArrayList<Character> characters;
 
     //The username
-    private String username;
+    String username;
 
     //User's password
-    private String password;
+    String password;
 
     //A hashed version of the users' password
-    private String passHash;
+    String passHash;
 
-    private String salt;
+    //Salt for the hashing
+    String salt;
 
     //The user's full name
-    private String firstName;
+    String firstName;
 
-    private String lastName;
+    String lastName;
 
     //A boolean determining if the user is signed up for a table_draft or not
-    private Boolean isSignedUp;
+    Boolean isSignedUp;
     User() {
         username = "";
         password = "";
         firstName = "";
         lastName = "";
+    }
+
+    User(String usrname, String pswd) {
+        username = usrname;
+        password = pswd;
     }
 
     User(String newUserName, String pswd, String newFirst, String newLast) {
