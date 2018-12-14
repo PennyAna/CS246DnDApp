@@ -31,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
         String username = usernameInput.getText().toString();
         String password = passwordInput.getText().toString();
 
-        dataController.loadUser(username);
+        dataController.loadUserBasics(username);
         try {
-            if (loginSecurity.validatePassword(dataController.currentUser, password)) {
-                dataController.load
+            if (loginSecurity.verifyPassword(dataController.currentUser, password)) {
+                dataController.loadCompleteUser(username);
+                setContentView(R.layout.main_menu);
             }
         }
         catch (Exception e) {
