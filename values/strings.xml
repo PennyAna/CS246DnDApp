@@ -81,7 +81,7 @@
 		<item>Warlock</item>
 		<item>Wizard</item>
 	</string-array>
-	</string-array name="level">
+	<string-array name="level">
 		<item>1</item>
 		<item>2</item>
 		<item>3</item>
