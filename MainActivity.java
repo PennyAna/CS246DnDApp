@@ -1,7 +1,8 @@
-package com.alex.j.cs246dd;
+package org.haderlie.claire.dundrag;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -92,7 +93,10 @@ public class MainActivity extends AppCompatActivity {
         catch(Exception e){
             e.printStackTrace();
         }
-
+        if(dataController.getCurrentUser() != null)
+            Log.v("SIGNUP", "User made and signed up.");
+        else
+            Log.e("SIGNUP", "User not created.");
         setContentView(R.layout.main_menu);
     }
 

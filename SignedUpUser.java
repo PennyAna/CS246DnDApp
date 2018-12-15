@@ -1,4 +1,4 @@
-package com.alex.j.cs246dd;
+package org.haderlie.claire.dundrag;
 
 
 /*
@@ -10,6 +10,7 @@ package com.alex.j.cs246dd;
  */
 
 public class SignedUpUser {
+
     private Character player;
     private String firstName;
     private String lastName;
@@ -18,6 +19,18 @@ public class SignedUpUser {
         firstName = user.getFirstName();
         lastName = user.getLastName();
         player = character;
+    }
+
+    public void setPlayer(Character character){
+        player = character;
+    }
+
+    public void setFirstName(String name){
+        firstName = name;
+    }
+
+    public void setLastName(String name){
+        lastName = name;
     }
 
     public Character getPlayer() {

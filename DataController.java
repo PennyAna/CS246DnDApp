@@ -6,8 +6,11 @@ import android.widget.EditText;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -24,10 +27,15 @@ public class DataController {
     public void setCurrentUser(User user){
         currentUser = user;
     }
+
+    public User getCurrentUser(){
+        return currentUser;
+    }
+
     /**
      * Read in the game night information from the database.
      */
-    public void loadUser(String username) {
+    public void loadUserBasics(String username) {
 
         StringBuilder resultBuilder = new StringBuilder();
 
@@ -47,11 +55,10 @@ public class DataController {
 
             in.close();
 
-
             Gson gson = new Gson();
             String userJson = resultBuilder.toString();
 
-          User user = gson.fromJson(userJson, User.class);
+          currentUser = gson.fromJson(userJson, User.class);
 
         } catch (Exception exp) {
             exp.printStackTrace();
@@ -61,12 +68,16 @@ public class DataController {
 
 
         //SINCE IT DOESN'T ACTUALLY WORK
-        currentUser.setFirstName("John");
-        currentUser.setLastName("Doe");
+
         currentUser.setIsSignedUp(false);
         currentUser.setPassword("");
-        currentUser.setSalt("$3@$@17");
+        currentUser.setSalt("");
         currentUser.setHashedPassword("h@$h$t4ing");
+    }
+
+    public void loadCompleteUser(String username){
+        currentUser.setFirstName("John");
+        currentUser.setLastName("Doe");
     }
 
     /**
@@ -105,14 +116,47 @@ public class DataController {
 
     public void storeUser() {
 
-        //here we will write the user to the database
+        Gson gson = new Gson();
+        String jsonUser = gson.toJson(currentUser, User.class);
+
+        try{
+            File file = new File("userData.txt");
+            file.createNewFile();
+
+            FileWriter writer = new FileWriter(file);
+
+            writer.write(jsonUser);
+            writer.flush();
+            writer.close();
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
 
         return;
     }
 
     public void storeGameNight() {
-        //Here we will write the gameNight information to the database
-        return;
+
+        Gson gson = new Gson();
+
+        String jsonUser = gson.toJson(gameNight, GameNight.class);
+        try{
+            File file = new File("gameNightData.txt");
+            file.createNewFile();
+
+            FileWriter writer = new FileWriter(file);
+
+            writer.write(jsonUser);
+            writer.flush();
+            writer.close();
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     private void setContentView(int activity_main) {
